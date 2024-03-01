@@ -12,8 +12,8 @@ using SGE.Data;
 namespace SGE.Migrations
 {
     [DbContext(typeof(SGEContext))]
-    [Migration("20240226131417_BancoDadosInicial")]
-    partial class BancoDadosInicial
+    [Migration("20240301185320_inicio")]
+    partial class inicio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

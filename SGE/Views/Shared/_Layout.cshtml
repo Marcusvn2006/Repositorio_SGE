@@ -11,7 +11,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" style="    backdrop-filter: saturete(180%), blur(20px);
+            background-color: #7b845ec3;">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SGE</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,38 +21,36 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="TiposUsuario" asp-action="Index">Tipos de Usuários</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="TiposUsuario" asp-action="Index">Tipos de Usuários</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="AlunosTurma" asp-action="ListaAlunos">Alunos por Turma</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="AlunosTurma" asp-action="ListaAlunos">Alunos por Turma</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="Salas" asp-action="Index">Salas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Salas" asp-action="Index">Salas</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="ReservasSala" asp-action="Reservas">Reservas de Sala</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ReservasSala" asp-action="Reservas">Reservas de Sala</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="TiposOcorrencia" asp-action="Index">Tipos de Ocorrência</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="TiposOcorrencia" asp-action="Index">Tipos de Ocorrência</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="Ocorrencias" asp-action="Index">Ocorrências</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ocorrencias" asp-action="Index">Ocorrências</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ocorrencias" asp-action="ListaOcorrencias">Boletim de Ocorrências</a>
+                            <a class="nav-link" style="color:#fff" asp-area="" asp-controller="Ocorrencias" asp-action="ListaOcorrencias">Boletim de Ocorrências</a>
                         </li>
 
                     </ul>
