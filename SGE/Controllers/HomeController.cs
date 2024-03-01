@@ -33,6 +33,8 @@ namespace SGE.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+
+
         public IActionResult Login()
         {
             List<TipoUsuario> tiposUsuario = _context.TiposUsuario.ToList();
