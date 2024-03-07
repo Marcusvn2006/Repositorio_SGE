@@ -1,0 +1,81 @@
+﻿@model IEnumerable<SGE.Models.Usuario>
+@{
+    ViewData["Title"] = "Login";
+}
+
+@if (ViewData["Erro"] != null)
+{
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-4 text-center">
+            <div class="alert alert-danger">
+                <strong> @ViewData["Erro"] </strong>
+
+            </div>
+        </div>
+    </div>
+}
+
+
+@* <div style="width: 350px;    display: flex;
+    flex-direction: column;
+ padding: 0 15px 0 15px; "> *@
+    <div style="background:rgba(0,0,0, 0.4);backdrop-filter:saturate(180%) blur(20px); display:flex;justify-content:center;align-items:center; flex-direction:column;border-radius:15px;width: 600px;
+    height: 400px;    margin-left: 350px;
+    margin-top: 200px;">
+     <div class="top">
+        <header style="    color: #fff;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 15px 0;">
+            Login
+        </header>
+    </div>
+    <form asp-action="Login" method="post" style="    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;">
+
+
+        <div class="inputs" style="    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;">
+            <input name="inEmail" id="inEmail" placeholder="E-mail" type="email" style="    height: 55px;
+        width: 430PX;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        color: #fff;
+        padding: 0 0 0 42px;
+        background: rgba(255, 255, 255, 0.1);" class="input" >
+        </div>
+
+        <div class="inputs" style="    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;">
+            <input name="inSenha" id="inSenha" placeholder="Senha" type="password" style="    height: 55px;
+       width: 430PX;
+       border: none;
+       outline: none;
+       border-radius: 30px;
+       color: #fff;
+       padding: 0 0 0 42px;
+       background: rgba(255, 255, 255, 0.1);" class="input" >    
+        </div>
+        <div class="inputs" style="    display: flex;
+   flex-direction: column;
+   margin-bottom: 15px;">
+            <input type="submit" value="Login" style="    height: 55px;
+    width: 230PX;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      color: #fff;
+    
+      background: rgba(255, 255, 255, 0.1);" class="submit">
+          
+        </div>
+
+    </form>
+    </div>
+@* </div> *@

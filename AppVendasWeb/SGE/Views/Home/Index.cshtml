@@ -1,0 +1,212 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    var sessionEmail = Context.Session.GetString("email");
+    var sessionNome = Context.Session.GetString("nome");
+    var sessionTipoUsuarioId = Context.Session.GetString("tipo");
+
+}
+
+<div style="
+            display: flex;
+            justify-content: center;
+            flex-direction: column; 
+margin-top:90px">
+    
+    <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            margin-bottom: 60px;
+">
+        <div style="
+cursor:pointer;
+            width: 380px;
+            height: 180px;
+            border-radius: 15px;
+         background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+
+            <a asp-controller="TiposUsuario" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index">Tipos de Usuario</a>
+        </div>
+        <div style="
+             width: 380px;
+            height: 180px;
+            border-radius: 15px;
+        background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+cursor:pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="Usuarios" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index">Usuarios</a>
+        </div>
+        <div style="
+               width: 380px;
+            height: 180px;
+            border-radius: 15px;
+    background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="Alunos" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index">Alunos</a>
+        </div>
+
+    </div>
+
+
+    <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          gap: 100px;
+            margin-bottom: 60px;
+">
+        <div style="
+               width: 380px;
+            height: 180px;
+            border-radius: 15px;
+       background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="Turmas" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index">Turmas</a>
+        </div>
+        <div style="
+             width: 380px;
+            height: 180px;
+            border-radius: 15px;
+       background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="AlunosTurma" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="ListaAlunos">Alunos por Turma</a>
+        </div>
+        <div style="
+              width: 380px;
+            height: 180px;
+            border-radius: 15px;
+           background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="Salas" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index">Salas</a>
+        </div>
+
+    </div>
+
+    <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             gap: 100px;
+            margin-bottom: 60px;
+">
+        <div style="
+              width: 380px;
+            height: 180px;
+            border-radius: 15px;
+     background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="ReservasSala" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Reservas">Reservas de Salas</a>
+        </div>
+        <div style="
+             width: 380px;
+            height: 180px;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="TiposOcorrencia" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index"> Tipos de Ocorrencia</a>
+        </div>
+        <div style="
+              width: 380px;
+            height: 180px;
+            border-radius: 15px;
+          background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="Ocorrencias" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="Index">Ocorrencias</a>
+        </div>
+    </div>
+
+    <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              gap: 100px;
+            margin-bottom: 60px;
+">
+        <div style="
+             width: 380px;
+            height: 180px;
+            border-radius: 15px;
+               background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);
+
+cursor:pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a asp-controller="Ocorrencias" style="
+            text-decoration: none;
+            color: white;
+            font-size: x-large;" asp-action="ListaOcorrencias">Boletim de Ocorrências</a>
+        </div>
+
+
+    </div>
+
+</div>
