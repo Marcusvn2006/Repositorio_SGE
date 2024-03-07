@@ -8,8 +8,7 @@
 
 <p>
     <a asp-action="Create">
-        <svg class="mx-2" bootstrap-icon="Plus" width="16" height="16" aria-label="Adicionar"></svg>
-
+        <svg class="mx-2" bootstrap-icon="FilePlus" width="16" height="16" aria-label="Create"></svg>
     </a>
 </p>
 <table class="table">
@@ -22,26 +21,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
-                <a class="btn btn-outline" asp-action="Edit">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TipoUsuarioId">
                         <svg class="mx-2" bootstrap-icon="PencilFill" width="16" height="16" aria-label="Adicionar"></svg>
-
                     </a> |
-                    <a class="btn btn-outline" asp-action="Details">
-                        <svg class="mx-2" bootstrap-icon="CardList" width="16" height="16" aria-label="Adicionar"></svg>
-
+                    <a asp-action="Details" asp-route-id="@item.TipoUsuarioId">
+                        <svg class="mx-2" bootstrap-icon="List" width="16" height="16" aria-label="Detalhes"></svg>
                     </a> |
-                    <a class="btn btn-outline" asp-action="Delete">
-                        <svg class="mx-2" bootstrap-icon="Trash2" width="16" height="16" aria-label="Adicionar"></svg>
-                        </a>
-
-            </td>
-        </tr>
-}
+                    <a asp-action="Delete" asp-route-id="@item.TipoUsuarioId">
+                        <svg class="mx-2" bootstrap-icon="Trash" width="16" height="16" aria-label="Delete"></svg>
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

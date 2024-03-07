@@ -7,9 +7,12 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create"><svg class="mx-2" bootstrap-icon="Plus" width="16" height="16" aria-label="Adicionar"></svg></a>
+    <a asp-action="Create">
+        <svg class="mx-2" bootstrap-icon="FilePlus" width="16" height="16" aria-label="Create"></svg>
+    </a>
 </p>
 <table class="table">
+
     <thead>
         <tr>
             <th>
@@ -38,9 +41,15 @@
                     @Html.DisplayFor(modelItem => item.CadInativo)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.TipoOcorrenciaId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.TipoOcorrenciaId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.TipoOcorrenciaId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.TipoOcorrenciaId">
+                        <svg class="mx-2" bootstrap-icon="PencilFill" width="16" height="16" aria-label="Adicionar"></svg>
+                    </a> |
+                    <a asp-action="Details" asp-route-id="@item.TipoOcorrenciaId">
+                        <svg class="mx-2" bootstrap-icon="List" width="16" height="16" aria-label="Detalhes"></svg>
+                    </a> |
+                    <a asp-action="Delete" asp-route-id="@item.TipoOcorrenciaId">
+                        <svg class="mx-2" bootstrap-icon="Trash" width="16" height="16" aria-label="Delete"></svg>
+                    </a>
                 </td>
             </tr>
         }

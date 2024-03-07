@@ -110,6 +110,8 @@ namespace SGE.Controllers
             if (ModelState.IsValid)
             {
                 turma.TurmaId = Guid.NewGuid();
+                turma.CadAtivo = true;
+                turma.DataInicio = DateTime.Now;
                 _context.Add(turma);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

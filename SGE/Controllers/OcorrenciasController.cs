@@ -94,8 +94,8 @@ namespace SGE.Controllers
                 }
             }
 
-            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaId");
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioId");
+            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaNome");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioNome");
             return View();
         }
 
@@ -109,12 +109,13 @@ namespace SGE.Controllers
             if (ModelState.IsValid)
             {
                 Ocorrencia.OcorrenciaId = Guid.NewGuid();
+                Ocorrencia.CadAtivo = true;
                 _context.Add(Ocorrencia);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaId", Ocorrencia.TipoOcorrenciaId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioId", Ocorrencia.UsuarioId);
+            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaNome", Ocorrencia.TipoOcorrenciaId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioNome", Ocorrencia.UsuarioId);
             return View(Ocorrencia);
         }
 
@@ -146,8 +147,8 @@ namespace SGE.Controllers
             {
                 return NotFound();
             }
-            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaId", Ocorrencia.TipoOcorrenciaId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioId", Ocorrencia.UsuarioId);
+            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaNome", Ocorrencia.TipoOcorrenciaId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioNome", Ocorrencia.UsuarioId);
             return View(Ocorrencia);
         }
 
@@ -183,8 +184,8 @@ namespace SGE.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaId", Ocorrencia.TipoOcorrenciaId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioId", Ocorrencia.UsuarioId);
+            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaNome", Ocorrencia.TipoOcorrenciaId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioNome", Ocorrencia.UsuarioId);
             return View(Ocorrencia);
         }
 
@@ -378,8 +379,8 @@ namespace SGE.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("OcorrenciasAluno", new { id = Ocorrencia.AlunoId });
             }
-            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaId", Ocorrencia.TipoOcorrenciaId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioId", Ocorrencia.UsuarioId);
+            ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaNome", Ocorrencia.TipoOcorrenciaId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioNome", Ocorrencia.UsuarioId);
             return View(Ocorrencia);
         }
     }

@@ -112,6 +112,8 @@ namespace SGE.Controllers
                     tipoOcorrencia.CadInativo = null;
                 }
                 tipoOcorrencia.TipoOcorrenciaId = Guid.NewGuid();
+                tipoOcorrencia.CadAtivo = true;
+
                 _context.Add(tipoOcorrencia);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

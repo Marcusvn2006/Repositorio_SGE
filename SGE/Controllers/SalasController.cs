@@ -113,6 +113,8 @@ namespace SGE.Controllers
                     sala.CadInativo = null;
                 }
                 sala.SalaId = Guid.NewGuid();
+                sala.CadAtivo = true;
+                //.CadInativo = DateTime.Now;
                 _context.Add(sala);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

@@ -16,8 +16,7 @@
 
 <p>
     <a asp-action="Create">
-        <svg class="mx-2" bootstrap-icon="Plus" width="16" height="16" aria-label="Adicionar">
-        </svg>
+        <svg class="mx-2" bootstrap-icon="FilePlus" width="16" height="16" aria-label="Create"></svg>
     </a>
 </p>
 <table class="table">
@@ -86,20 +85,18 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.CadAtivo)
                 </td>
-                <td class="text-end">
-                    <a class="btn btn-outline" asp-action="Edit" asp-route-id="@item.AlunoId">
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AlunoId">
                         <svg class="mx-2" bootstrap-icon="PencilFill" width="16" height="16" aria-label="Adicionar"></svg>
                     </a> |
-                    <a class="btn btn-outline" asp-action="Details" asp-route-id="@item.AlunoId">
-                        <svg class="mx-2" bootstrap-icon="CardList" width="16" height="16" aria-label="Adicionar"></svg>
-
+                    <a asp-action="Details" asp-route-id="@item.AlunoId">
+                        <svg class="mx-2" bootstrap-icon="List" width="16" height="16" aria-label="Detalhes"></svg>
                     </a> |
-                    <a class="btn btn-outline" asp-action="Delete" asp-route-id="@item.AlunoId">
-                        <svg class="mx-2" bootstrap-icon="Trash2" width="16" height="16" aria-label="Adicionar"></svg>
+                    <a asp-action="Delete" asp-route-id="@item.AlunoId">
+                        <svg class="mx-2" bootstrap-icon="Trash" width="16" height="16" aria-label="Delete"></svg>
                     </a>
                 </td>
             </tr>
-
         }
     </tbody>
 </table>

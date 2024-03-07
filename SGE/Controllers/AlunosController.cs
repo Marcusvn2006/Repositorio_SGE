@@ -165,7 +165,7 @@ namespace SGE.Controllers
                 _context.Usuarios.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            }   
             Guid idTipo = _context.TiposUsuario.Where(a => a.Tipo == "Aluno")
                                                .FirstOrDefault().TipoUsuarioId;
             ViewData["TipoUsuarioId"] = idTipo;
