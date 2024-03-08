@@ -6,11 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SGE.Migrations
 {
     /// <inheritdoc />
-<<<<<<<< HEAD:AppVendasWeb/SGE/Migrations/20240301185320_inicio.cs
-    public partial class inicio : Migration
-========
-    public partial class mpm : Migration
->>>>>>>> main:AppVendasWeb/SGE/Migrations/20240307142033_mpm.cs
+    public partial class AjustesIniciais : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -180,19 +176,19 @@ namespace SGE.Migrations
                         column: x => x.AlunoId,
                         principalTable: "Aluno",
                         principalColumn: "AlunoId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ocorrencia_TipoOcorrencia_TipoOcorrenciaId",
                         column: x => x.TipoOcorrenciaId,
                         principalTable: "TipoOcorrencia",
                         principalColumn: "TipoOcorrenciaId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ocorrencia_Usuario_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "Usuario",
                         principalColumn: "UsuarioId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

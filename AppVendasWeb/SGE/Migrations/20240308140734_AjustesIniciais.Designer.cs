@@ -12,13 +12,8 @@ using SGE.Data;
 namespace SGE.Migrations
 {
     [DbContext(typeof(SGEContext))]
-<<<<<<<< HEAD:AppVendasWeb/SGE/Migrations/20240301185320_inicio.Designer.cs
-    [Migration("20240301185320_inicio")]
-    partial class inicio
-========
-    [Migration("20240307142033_mpm")]
-    partial class mpm
->>>>>>>> main:AppVendasWeb/SGE/Migrations/20240307142033_mpm.Designer.cs
+    [Migration("20240308140734_AjustesIniciais")]
+    partial class AjustesIniciais
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
