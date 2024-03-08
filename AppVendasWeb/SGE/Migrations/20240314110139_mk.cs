@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SGE.Migrations
 {
     /// <inheritdoc />
-    public partial class AjustesIniciais : Migration
+    public partial class mk : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

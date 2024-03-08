@@ -19,5 +19,9 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: #D7E4C0;
+background-image:url("../img/imgFundo.png");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
 }
