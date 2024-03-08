@@ -383,5 +383,28 @@ namespace SGE.Controllers
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "UsuarioId", "UsuarioNome", Ocorrencia.UsuarioId);
             return View(Ocorrencia);
         }
+
+        public async Task<IActionResult> Responder(Guid id)
+        {
+            if (HttpContext.Session.GetString("email") == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else
+            {
+                
+                ViewData["alunoId"] = id;
+                ViewData["alunoNome"] = _context.Alunos.Where(a => a.AlunoId == id).FirstOrDefault().AlunoNome;
+                ViewData["TipoOcorrenciaId"] = new SelectList(_context.TiposOcorrencia, "TipoOcorrenciaId", "TipoOcorrenciaNome");
+                ViewData["usuarioId"] = _context.Usuarios.Where(a => a.Email == HttpContext.Session.GetString("email")).FirstOrDefault().UsuarioId;
+                ViewData["usuarioNome"] = _context.Usuarios.Where(a => a.Email == HttpContext.Session.GetString("email")).FirstOrDefault().UsuarioNome;
+                Ocorrencia ocorrencia = new Ocorrencia();
+                ocorrencia = _context.Ocorrencias.Where(o => o.OcorrenciaId == id). FirstOrDefault();
+                return View(ocorrencia);
+            }
+        }
+
     }
+
+
 }
