@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SGE.Migrations
 {
     /// <inheritdoc />
-    public partial class BancoDadosInicial : Migration
+    public partial class mvn : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -62,7 +62,7 @@ namespace SGE.Migrations
                     CadAtivo = table.Column<bool>(type: "bit", nullable: false),
                     CadInativo = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DataInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataFim = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataFim = table.Column<DateTime>(type: "datetime2", nullable: true),
                     TurmaEncerrada = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

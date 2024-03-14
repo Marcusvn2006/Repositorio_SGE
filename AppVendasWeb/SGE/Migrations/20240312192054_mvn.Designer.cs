@@ -12,8 +12,8 @@ using SGE.Data;
 namespace SGE.Migrations
 {
     [DbContext(typeof(SGEContext))]
-    [Migration("20240226131417_BancoDadosInicial")]
-    partial class BancoDadosInicial
+    [Migration("20240312192054_mvn")]
+    partial class mvn
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -277,7 +277,7 @@ namespace SGE.Migrations
                     b.Property<DateTime?>("CadInativo")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataFim")
+                    b.Property<DateTime?>("DataFim")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataInicio")
