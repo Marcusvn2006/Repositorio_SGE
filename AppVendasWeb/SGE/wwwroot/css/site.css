@@ -25,3 +25,13 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+
+thead {
+    background: rgba(0,0,0, 0.4);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+tbody {
+    background: rgba(0,0,0, 0.4);
+    backdrop-filter: saturate(180%) blur(20px);
+}
