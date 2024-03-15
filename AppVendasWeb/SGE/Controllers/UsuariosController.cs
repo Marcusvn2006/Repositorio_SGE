@@ -107,8 +107,8 @@ namespace SGE.Controllers
             if (ModelState.IsValid)
             {
                 usuario.UsuarioId = Guid.NewGuid();
-        usuario.CadAtivo = true;
-        usuario.DataCadastro = DateTime.Now;
+                usuario.CadAtivo = true;
+                usuario.DataCadastro = DateTime.Now;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -218,7 +218,7 @@ namespace SGE.Controllers
 
                 if (usuario.TipoUsuarioId == _context.TiposUsuario.FirstOrDefault(a => a.Tipo == "Aluno").TipoUsuarioId)
                 {
-                    Aluno aluno = _context.Alunos.Where(a => a.Email == usuario.Email).FirstOrDefault();
+                    Aluno aluno = _context.Alunos.Where(a => a.Email == _context.Usuarios.Where(u => u.UsuarioId == usuario.UsuarioId).FirstOrDefault().Email).FirstOrDefault();
                     aluno.Senha = usuario.Senha;
                     aluno.Celular = usuario.Celular;
                     aluno.AlunoNome = usuario.UsuarioNome;

@@ -28,8 +28,4 @@
     <None Include="wwwroot\js\reservas.js" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
-
 </Project>

@@ -11,11 +11,12 @@
 </head>
 <body style="">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3" style="background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px); height:70px;    display: flex;
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3" style="background:rgba(0,0,0, 0.4); backdrop-filter:saturate(180%) blur(20px); height:70px;    display: flex;
     justify-content: center;  ">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="  font-size: x-large;
   font-weight: 800;
+position:absolute;
   color: #fff;    display: flex;
     justify-content: center;width:100%;">SGE</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -23,38 +24,38 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-              @*       <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="TiposUsuario" asp-action="Index">Tipos de Usuários</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="AlunosTurma" asp-action="ListaAlunos">Alunos por Turma</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Salas" asp-action="Index">Salas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="ReservasSala" asp-action="Reservas">Reservas de Sala</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="TiposOcorrencia" asp-action="Index">Tipos de Ocorrência</a>
-                        </li>
-                      
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Ocorrencias" asp-action="ListaOcorrencias">Boletim de Ocorrências</a>
-                        </li>
+                    @*       <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="TiposUsuario" asp-action="Index">Tipos de Usuários</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="AlunosTurma" asp-action="ListaAlunos">Alunos por Turma</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Salas" asp-action="Index">Salas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="ReservasSala" asp-action="Reservas">Reservas de Sala</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="TiposOcorrencia" asp-action="Index">Tipos de Ocorrência</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Ocorrencias" asp-action="ListaOcorrencias">Boletim de Ocorrências</a>
+                    </li>
 
                     </ul> *@
                 </div>
@@ -76,7 +77,7 @@
         </main>
     </div>
 
-    <footer class="footer text-muted" style="background: linear-gradient(to bottom, #9d68aa94, #9c5d9e36); backdrop-filter:saturate(180%) blur(20px);height:90px">
+    <footer class="footer text-muted" style="background:rgba(0,0,0, 0.4); backdrop-filter:saturate(180%) blur(20px);height:90px">
         <div class="container">
             &copy; 2024 - SGE - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

@@ -246,13 +246,20 @@ namespace SGE.Controllers
                 //}
                 return View(aluno);
             }
-            if
+
 
 
             if (ModelState.IsValid)
             {
-                    Email emailAntigo = _context.Email.Where(a => a.AlunoId == Email.AlunoId).FirstOrDefault();
-                Usuario usuario = _context.Usuarios.Where(a => a.Email == aluno.Email).FirstOrDefault();
+                //Email emailAntigo = _context.Email.Where(a => a.TipoUsuarioId == Aluno.AlunoId).FirstOrDefault();
+                //if (emailAntigo.AlunoId == "Email")
+                //    {
+                //        ViewData["Erro"] = "Os tipos de usuários ADMINISTRADOR, ALUNO e PROFESSOR  não podem ser alterados!";
+
+                //    }
+
+                Usuario usuario = _context.Usuarios.Where(u => u.Email == _context.Alunos.Where(u => u.AlunoId == aluno.AlunoId).FirstOrDefault().Email).FirstOrDefault();
+
                 if (aluno.CadAtivo == false)
                 {
                     aluno.CadInativo = DateTime.Now;
