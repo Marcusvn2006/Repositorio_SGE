@@ -19,11 +19,21 @@ html {
 
 body {
     margin-bottom: 60px;
-background-image:url("../img/imgFundo.png");
-background-size:cover;
-background-repeat:no-repeat;
-background-position:center;
-background-attachment:fixed;
+    background-image: url("../img/fund.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+thead {
+    background: rgba(0,0,0, 0.4);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+tbody {
+    background: rgba(0,0,0, 0.4);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 

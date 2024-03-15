@@ -22,20 +22,52 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Aluno.AlunoId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Turma.TurmaId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AlunoTurmaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AlunoTurmaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AlunoTurmaId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aluno.AlunoId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Turma.TurmaId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AlunoTurmaId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.AlunoTurmaId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AlunoTurmaId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<div style="    display: flex;
+    justify-content: space-around;
+margin-top: 320px;">
+    <div style="    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px color(0, 0, 0);
+    background:rgba(0,0,0, 0.4); backdrop-filter:saturate(180%) blur(20px);">
+        <a asp-controller="Turmas" asp-action="Index">
+            <svg class="mx-2" bootstrap-icon="ArrowLeftCircleFill" width="30px" height="30px" color="#a7a7a7">
+            </svg>
+        </a>
+    </div>
+
+    <div style="    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px color(0, 0, 0);
+    background:rgba(0,0,0, 0.4); backdrop-filter:saturate(180%) blur(20px);">
+        <a asp-controller="Salas" asp-action="Salas">
+            <svg class="mx-2" bootstrap-icon="ArrowRightCircleFill" width="30px" height="30px" color="#a7a7a7">
+            </svg>
+        </a>
+    </div>
+</div>

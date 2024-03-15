@@ -107,8 +107,8 @@ namespace SGE.Controllers
             if (ModelState.IsValid)
             {
                 usuario.UsuarioId = Guid.NewGuid();
-        usuario.CadAtivo = true;
-        usuario.DataCadastro = DateTime.Now;
+                usuario.CadAtivo = true;
+                usuario.DataCadastro = DateTime.Now;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
