@@ -12,8 +12,8 @@ using SGE.Data;
 namespace SGE.Migrations
 {
     [DbContext(typeof(SGEContext))]
-    [Migration("20240314110139_mk")]
-    partial class mk
+    [Migration("20240315123120_mbm")]
+    partial class mbm
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

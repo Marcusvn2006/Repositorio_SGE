@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using SGE.Data;
 using SGE.Models;
 
@@ -113,7 +114,7 @@ namespace SGE.Controllers
 
             if (ModelState.IsValid)
             {
-                    Guid IdTipoUse = _context.TiposUsuario.Where(a => a.Tipo == "Aluno").FirstOrDefault().TipoUsuarioId;
+                Guid IdTipoUse = _context.TiposUsuario.Where(a => a.Tipo == "Aluno").FirstOrDefault().TipoUsuarioId;
                 if (_context.Alunos.Where(a => a.Email == aluno.Email).FirstOrDefault() != null)
                 {
                     ViewData["Erro"] = "Email já cadastrado!";
@@ -166,16 +167,16 @@ namespace SGE.Controllers
                 _context.Usuarios.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }   
+            }
             Guid idTipo = _context.TiposUsuario.Where(a => a.Tipo == "Aluno")
                                                .FirstOrDefault().TipoUsuarioId;
             ViewData["TipoUsuarioId"] = idTipo;
-          //if(_context.Alunos.Where(a => a.Email == aluno.Email).FirstOrDefault() != null)
-          //{
-          //    ViewData["Erro"] = "Email já cadastrado!";
+            //if(_context.Alunos.Where(a => a.Email == aluno.Email).FirstOrDefault() != null)
+            //{
+            //    ViewData["Erro"] = "Email já cadastrado!";
 
-          //  }
-        
+            //  }
+
             return View(aluno);
         }
 
@@ -245,10 +246,12 @@ namespace SGE.Controllers
                 //}
                 return View(aluno);
             }
+            if
 
 
             if (ModelState.IsValid)
             {
+                    Email emailAntigo = _context.Email.Where(a => a.AlunoId == Email.AlunoId).FirstOrDefault();
                 Usuario usuario = _context.Usuarios.Where(a => a.Email == aluno.Email).FirstOrDefault();
                 if (aluno.CadAtivo == false)
                 {

@@ -156,31 +156,38 @@ namespace SGE.Controllers
 
             if (ModelState.IsValid)
             {
-                TipoUsuario tipoUsuarioAntigo = _context.TiposUsuario.Where(a => a.TipoUsuarioId == tipoUsuario.TipoUsuarioId).FirstOrDefault();
-                if (tipoUsuarioAntigo.Tipo == "Administrador" || tipoUsuarioAntigo.Tipo == "Aluno")
-                {
-                    ViewData["Erro"] = "Os tipos de usuários ADMINISTRADOR e ALUNO não podem ser alterados!";
-                    return View(tipoUsuario);
-                }
+                //TipoUsuario tipoUsuarioAntigo = _context.TiposUsuario.Where(a => a.TipoUsuarioId == tipoUsuario.TipoUsuarioId).FirstOrDefault();
+                //if (tipoUsuarioAntigo.Tipo == "Tipo")
+                //{
+                //    ViewData["Erro"] = "Os tipos de usuários ADMINISTRADOR, ALUNO e PROFESSOR  não podem ser alterados!";
+                //}
+                //else
+                //{
+                //    tipoUsuarioAntigo.Tipo = tipoUsuario.Tipo;
+                //    return View(tipoUsuario);
+                //}
 
-                try
-                {
-                    _context.Update(tipoUsuario);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TipoUsuarioExists(tipoUsuario.TipoUsuarioId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                //try
+                //{
+                //    _context.Update(tipoUsuario);
+                //    await _context.SaveChangesAsync();
+                //}
+                //catch (DbUpdateConcurrencyException)
+                //{
+                //    if (!TipoUsuarioExists(tipoUsuario.TipoUsuarioId))
+                //    {
+                //        return NotFound();
+                //    }
+                //    else
+                //    {
+                //        throw;
+                //    }
+                //}
+                //return RedirectToAction(nameof(Index));
+
             }
+
+            ViewData["Erro"] = "Os tipos de usuários não podem ser alterados!";
             return View(tipoUsuario);
         }
 
